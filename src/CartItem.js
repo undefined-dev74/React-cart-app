@@ -10,15 +10,24 @@ class CartItem extends React.Component{
         }
     }
      increaseQty = () =>{
-    console.log(this, this.state)
+         this.setState( prevState => {
+             return {
+                 qty: prevState.qty +1
+             }
+         })
    }
+    decreaseQty = () => {
+        this.setState(sta => {
+           return{ qty : sta.qty -1}
+        })
+    }
     render (){
         const {title, price, qty} = this.state
         // all function goes below 
         return (
             <div className = 'cart-item'>
                 <div className="right-block">
-                    <img style={style.image}/>
+                    <img style={style.image} alt=''/>
                 </div>
                 <div className="left-block">
                 <div style = { {fontSize:25}}>{title}</div>
@@ -31,7 +40,8 @@ class CartItem extends React.Component{
                 onClick = {this.increaseQty}/>
                 <img alt = "decrease" 
                 className = "action-icons" 
-                src="https://image.flaticon.com/icons/svg/1341/1341073.svg"/>
+                src="https://image.flaticon.com/icons/svg/1341/1341073.svg"
+                onClick = {this.decreaseQty}/>
                 <img alt = "delete"
                 className = "action-icons"
                 src="https://image.flaticon.com/icons/svg/443/443153.svg"/>
