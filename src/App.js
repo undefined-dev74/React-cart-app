@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Cart from './Cart';
 import Navbar from './Navbar';
 
@@ -94,6 +95,19 @@ class App extends React.Component {
       </div>
     );
   }
+=======
+import CartItem from './CartItem';
+import Cart from './Cart';
+// import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <CartItem />
+      <Cart />
+    </div>
+  );
+>>>>>>> 8878bd83361db53cbfc61d6dd8a0e2341a406434
 }
 
 export default App;
