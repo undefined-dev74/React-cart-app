@@ -6,10 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 8878bd83361db53cbfc61d6dd8a0e2341a406434
 .cart-item {
   display: inline-flex;
   margin: 20px 10px;
@@ -28,15 +24,7 @@ body {
 .action-icons:hover {
   cursor: pointer;
 }
-<<<<<<< HEAD
 .cart {
   display: flex;
   flex-direction: column;
 }
-=======
-
-.cart {
-  display: flex;
-  flex-direction: column;
-}
->>>>>>> 8878bd83361db53cbfc61d6dd8a0e2341a406434

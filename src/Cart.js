@@ -1,10 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import CartItem from './CartItem';
 import Navbar from './Navbar';
 
 const Cart = (props) => {
-<<<<<<< HEAD
   const { products } = props;
   return (
     <div className="cart">
@@ -21,42 +19,7 @@ const Cart = (props) => {
       })}
     </div>
   );
-=======
-import CartItem from './CartItem'
-class Cart extends React.Component{
-
-    render (){
-       return (
-        //    <div>{CartItem}</div>
-        <div className='cart'>
-            < CartItem />
-            < CartItem />
-            < CartItem />
-        </div>
-       )
-    }
->>>>>>> 8878bd83361db53cbfc61d6dd8a0e2341a406434
 }
 
 export default Cart;
-=======
-	const { products } = props;
-	return (
-		<div className="cart">
-			{products.map((product) => {
-				return (
-					<CartItem
-						product={product}
-						key={product.id}
-						onIncreaseQuantity={props.onIncreaseQuantity}
-						onDecreaseQunatity={props.onDecreaseQunatity}
-						onDeleteProduct={props.onDeleteProduct}
-					/>
-				);
-			})}
-		</div>
-	);
-};
 
-export default Cart;
->>>>>>> fetalrecovery

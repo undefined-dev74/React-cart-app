@@ -1,26 +1,14 @@
 {
-<<<<<<< HEAD
   "name": "cart",
-=======
-  "name": "hello",
->>>>>>> 8878bd83361db53cbfc61d6dd8a0e2341a406434
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
-<<<<<<< HEAD
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.4.0"
-=======
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
->>>>>>> 8878bd83361db53cbfc61d6dd8a0e2341a406434
   },
   "scripts": {
     "start": "react-scripts start",

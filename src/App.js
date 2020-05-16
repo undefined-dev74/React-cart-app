@@ -1,7 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import Cart from './Cart';
-<<<<<<< HEAD
 import Navbar from './Navbar';
 
 class App extends React.Component {
@@ -14,21 +12,21 @@ class App extends React.Component {
           price: 99,
           title: 'Watch',
           qty: 1,
-          img: 'https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80',
+          img: 'https://unsplash.com/photos/8b1cWDyvT7Y',
           id: 1
         },
         {
           price: 999,
           title: 'Mobile Phone',
           qty: 10,
-          img: 'https://images.unsplash.com/photo-1525598912003-663126343e1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+          img: 'https://unsplash.com/photos/1bBCtUAUMFI',
           id: 2
         },
         {
           price: 999,
           title: 'Laptop',
           qty: 4,
-          img: 'https://images.unsplash.com/photo-1542393545-10f5cde2c810?ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80',
+          img: 'https://unsplash.com/photos/u76CN5rZeOU',
           id: 3
         }
       ]
@@ -72,16 +70,28 @@ class App extends React.Component {
     })
   }
 
-  getCartCount () {
+  getCartCount = () => {
     const { products } = this.state;
 
     let count = 0;
+
     products.forEach((product) => {
-      count += product.qty
-    });
+      count += product.qty;
+    })
 
     return count;
   }
+
+  getCartTotal = () => {
+    const {products} =this.state;
+    let cartTotal = 0;
+    products.map(product => {
+      cartTotal = cartTotal + product.qty * product.price;
+    })
+
+    return cartTotal;
+  }
+
   render () {
     const { products } = this.state;
     return (
@@ -93,106 +103,10 @@ class App extends React.Component {
           onDecreaseQuantity={this.handleDecreaseQuantity}
           onDeleteProduct={this.handleDeleteProduct}
         />
+      <div > Total : {this.getCartTotal}</div>
       </div>
     );
   }
-=======
-import CartItem from './CartItem';
-import Cart from './Cart';
-// import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <CartItem />
-      <Cart />
-    </div>
-  );
->>>>>>> 8878bd83361db53cbfc61d6dd8a0e2341a406434
-=======
-import Navbar from './Navbar'
-
-class App extends React.Component {
-  constructor () {
-    super();
-    this.state = {
-      products: [
-        {
-          price: 99,
-          title: 'Watch',
-          qty: 1,
-          img: '',
-          id: 1
-        },
-        {
-          price: 999,
-          title: 'Mobile Phone',
-          qty: 10,
-          img: '',
-          id: 2
-        },
-        {
-          price: 999,
-          title: 'Laptop',
-          qty: 4,
-          img: '',
-          id: 3
-        }
-      ]
-    }
-    
-  }
-  handleIncreaseQuantity = (product) => {
-    console.log('Heyy please inc the qty of ', product);
-    const { products } = this.state;
-    const index = products.indexOf(product);
-
-    products[index].qty += 1;
-
-    this.setState({
-      products
-    })
-  }
-  
-  handleDecreseQuantity = product => {
-    const {products} = this.state;
-    const index = products.indexOf(product);
-    if(products[index].qty === 0) return
-    products[index].qty -= 1;
-    this.setState({products})
-  }
-
-  handleDeleteProduct = id => {
-    const {products} = this.state;
-    const items = products.filter( item => item.id !== id);
-    console.log(items)
-    this.setState({products :items})
-  }
-
-  getCartCount = () => {
-    const {products} = this.state;
-
-    let count = 0;
-    products.forEach(product => {
-      count += product.qty;
-    });
-  }
- 
-  render(){
-    const {products} = this.state;
-    return (
-      <div className="App">
-        <Navbar count = {this.getCartCount()}/>
-        <Cart 
-          products = {products}
-          onIncreaseQuantity={this.handleIncreaseQuantity}
-          onDecreaseQunatity = {this.handleDecreseQuantity}
-          onDeleteProduct = {this.handleDeleteProduct}
-        />
-      </div>
-    );
-  }
->>>>>>> fetalrecovery
 }
 
 export default App;
