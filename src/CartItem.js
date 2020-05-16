@@ -1,18 +1,32 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fetalrecovery
 const CartItem = (props) => {
 	const { price, title, qty } = props.product;
 	const {
 		product,
+<<<<<<< HEAD
 		onIncreaseQuantity,
 		onDecreaseQuantity,
+=======
+		onDecreaseQunatity,
+		onIncreaseQuantity,
+>>>>>>> fetalrecovery
 		onDeleteProduct,
 	} = props;
 	return (
 		<div className="cart-item">
+<<<<<<< HEAD
 			<div className="left-block">
 				<img style={styles.image} src={product.img} />
+=======
+			{props.jsx}
+			<div className="left-block">
+				<img style={styles.image} />
+>>>>>>> fetalrecovery
 			</div>
 			<div className="right-block">
 				<div style={{ fontSize: 25 }}>{title}</div>
@@ -30,7 +44,11 @@ const CartItem = (props) => {
 						alt="decrease"
 						className="action-icons"
 						src="https://image.flaticon.com/icons/svg/1665/1665612.svg"
+<<<<<<< HEAD
 						onClick={() => onDecreaseQuantity(product)}
+=======
+						onClick={() => onDecreaseQunatity(product)}
+>>>>>>> fetalrecovery
 					/>
 					<img
 						alt="delete"
@@ -52,6 +70,7 @@ const styles = {
 		background: '#ccc',
 	},
 };
+<<<<<<< HEAD
 
 export default CartItem;
 =======
@@ -118,3 +137,7 @@ const style = {
 }
 export default CartItem;
 >>>>>>> 8878bd83361db53cbfc61d6dd8a0e2341a406434
+=======
+
+export default CartItem;
+>>>>>>> fetalrecovery
